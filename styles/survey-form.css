@@ -1,0 +1,261 @@
+:root {
+    --navy-color: #364f6be0;
+    --teal-color: #3FC1C9;
+    --white-color: #F5F5F5;
+    --pink-color: #fc5185;
+}
+
+html {
+    font-size: 16px;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    letter-spacing: 0.05rem;
+    color: var(--navy-color);
+}
+
+body {
+    width: 100%;
+    height: auto;
+    padding: 0 0 2.5rem;
+}
+
+header {
+    text-align: center;
+    margin: 1rem;
+    min-width: 150px;
+}
+
+h1 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 0.2em;
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.emoji {
+    font-size: 5rem;
+}
+
+form {
+    margin: 0 auto;
+    width: 90%;
+    min-width: 150px;
+    max-width: 500px;
+    padding: 5px 15px 30px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.774);
+    box-shadow: 2px 5px 10px -1px var(--navy-color);
+}
+
+span {
+    font-size: 0.8em;
+}
+
+fieldset {
+    padding: -1% 2%;
+    margin: 3% 0;
+    border: none;  
+}
+
+fieldset:last-of-type {
+    margin: 0 0 -3vh;
+}
+
+label:not(.custom-radio, .narrow),
+input:not(.inline),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 1.5%;
+    min-height: 2rem;
+    margin: 1.5vh 0;
+    font-size: 0.95em;
+}
+
+legend {
+    padding-left: 1.5%;
+    margin: 0 0 1.5vh;
+}
+
+.space {
+    margin-top: 4vh;
+}
+
+.custom-radio input[type="radio"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 1px dashed var(--pink-color);
+    margin: 0 -25px 0 1.5%;
+    background-color: var(--white-color);
+    border-radius: 5px;
+}
+
+.custom-radio span {
+    vertical-align: super;
+    position: relative;
+    left: -0.25vh;
+    top: -0.3vh;
+}
+
+.custom-radio input[type="radio"]:checked {
+    background-color: var(--teal-color);
+}
+
+input[type="checkbox"] {
+    margin-right: 2%;
+    margin-left: 0.5%;
+    width: 3vh;
+    height: 3vh;
+    max-width: 20px;
+    max-height: 20px;
+    vertical-align: middle;
+    accent-color: var(--pink-color);
+    outline-offset: -1px;
+    outline: auto var(--pink-color);
+}
+
+input,
+select,
+textarea{
+    outline: none;
+    border: 1px solid var(--pink-color);
+    border-radius: 5px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border: 2px solid var(--teal-color);
+    cursor: pointer;
+}
+
+input:hover,
+textarea:hover {
+    cursor: pointer;
+}
+
+.narrow {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding-left: 1%;
+}
+
+textarea {
+    border-radius: 5px;
+    border: 1px solid var(--pink-color);
+}
+
+button {
+    display: block;
+    width: 6.5rem;
+    height: 2.25rem;
+    margin: 1rem auto 0;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--teal-color);
+    box-shadow: -1px 5px 10px 0 var(--navy-color);
+    color: var(--white-color);
+    transition: all ease-in-out 0.15s;
+    text-shadow: 1px 1px 0 var(--pink-color);
+    font-size: clamp(1rem, 0.875rem + 1vw, 1.25rem);
+}
+
+button:hover,
+button:focus {
+    background-color: var(--pink-color);
+    text-shadow: 1px 2px 0 var(--teal-color);
+    color: var(--white-color);
+    cursor: pointer;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+.teal {
+    width: 50%;
+    padding-bottom: 50%;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--teal-color);
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+    z-index: -1;
+}
+
+.pink {
+    width: 50vw;
+    padding-bottom: 50vw;
+    background-color: var(--pink-color);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    z-index: -1;
+}
+
+
+/* Desktop Size */
+
+@media only screen and (min-width: 600px) {
+    body {
+        width: 100vw;
+        padding: 0 0 3rem;
+    }
+    
+    header {
+        min-width: 350px;
+    }
+    
+    h1 {
+        font-size: clamp(0.75rem, 0.75rem + 3.6458vw, 2.5rem);
+    }
+    
+    p {
+        font-size: clamp(1rem, 1.75vw, 1.2rem);
+    }
+    
+    .emoji {
+        font-size: 5rem;
+    }
+    
+    form {
+        width: 80%;
+        min-width: 350px;
+        max-width: 600px;
+        font-size: clamp(0.5rem, 0.5rem + 1.5625vw, 1.25rem);
+    }
+
+    .custom-radio input[type="radio"] {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .custom-radio span {
+        left: -0.875vh;
+        top: -0.525vh;
+    }
+    
+    input[type="checkbox"] {
+        width: 4vh;
+        height: 4vh;
+    }
+    
+    button {
+        width: 20vw;
+        max-height: 3rem;
+    }
+}
